@@ -513,6 +513,33 @@ code.hljs {
   right: 4px;
   top: 8px;
 }
+.expand-btn {
+  bottom: 0;
+  color: var(--highlight-foreground);
+  cursor: pointer;
+  display: none;
+  left: 0;
+  right: 0;
+  position: absolute;
+  text-align: center;
+}
+.fold-cover {
+  background-image: linear-gradient(to top, var(--highlight-background) 0, rgba(0,0,0,0) 100%);
+  bottom: 0;
+  display: none;
+  height: 50px;
+  left: 0;
+  right: 0;
+  position: absolute;
+}
+.highlight-fold {
+  max-height: 500px;
+  overflow-y: hidden !important;
+}
+.highlight-fold .expand-btn,
+.highlight-fold .fold-cover {
+  display: block;
+}
 code,
 kbd,
 figure.highlight,
@@ -1210,6 +1237,43 @@ pre code {
 .use-motion .menu-item {
   visibility: hidden;
 }
+.github-corner :hover .octo-arm {
+  animation: octocat-wave 560ms ease-in-out;
+}
+.github-corner svg {
+  color: #fff;
+  fill: var(--theme-color);
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 5;
+}
+@media (max-width: 991px) {
+  .github-corner {
+    display: none;
+  }
+  .github-corner svg {
+    color: var(--theme-color);
+    fill: #fff;
+  }
+  .github-corner .github-corner:hover .octo-arm {
+    animation: none;
+  }
+  .github-corner .github-corner .octo-arm {
+    animation: octocat-wave 560ms ease-in-out;
+  }
+}
+@keyframes octocat-wave {
+  0%, 100% {
+    transform: rotate(0);
+  }
+  20%, 60% {
+    transform: rotate(-25deg);
+  }
+  40%, 80% {
+    transform: rotate(10deg);
+  }
+}
 @media (max-width: 991px) {
   .sidebar {
     left: -320px;
@@ -1249,7 +1313,7 @@ pre code {
     vertical-align: middle;
   }
   .links-of-author a::before {
-    background: #ff08ff;
+    background: #de6ff4;
     display: inline-block;
     margin-right: 3px;
     transform: translateY(-2px);
@@ -2852,6 +2916,33 @@ header.header {
     padding: 10px 12px;
   }
 }
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url("https://cdn.jsdelivr.net/gh/JetBrains/JetBrainsMono/web/woff2/JetBrainsMono-Regular.woff2") format('woff2'), url("https://cdn.jsdelivr.net/gh/JetBrains/JetBrainsMono/web/woff/JetBrainsMono-Regular.woff") format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url("https://cdn.jsdelivr.net/gh/JetBrains/JetBrainsMono/web/woff2/JetBrainsMono-Italic.woff2") format('woff2'), url("https://cdn.jsdelivr.net/gh/JetBrains/JetBrainsMono/web/woff/JetBrainsMono-Italic.woff") format('woff');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url("https://cdn.jsdelivr.net/gh/JetBrains/JetBrainsMono/web/woff2/JetBrainsMono-Bold.woff2") format('woff2'), url("https://cdn.jsdelivr.net/gh/JetBrains/JetBrainsMono/web/woff/JetBrainsMono-Bold.woff") format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+.highlight pre,
+pre code,
+.hljs {
+  font-family: "JetBrains Mono", Consolas, Menlo, monospace;
+  font-size: 14px;
+}
 a {
   border-bottom: none;
 }
@@ -2869,23 +2960,86 @@ a:hover {
 .posts-expand .post-tags a:hover {
   background: #337ecc;
 }
-body.darkmode--activated .highlight pre {
-  background: #282c34 !important;
+body.darkmode--activated .hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 0.5em;
+  background: #f8f8f8;
+  color: #333;
 }
-body.darkmode--activated .hljs-keyword {
-  color: #c678dd !important;
+body.darkmode--activated .hljs-comment,
+body.darkmode--activated .hljs-quote {
+  color: #998;
+  font-style: italic;
 }
-body.darkmode--activated .hljs-string {
-  color: #98c379 !important;
+body.darkmode--activated .hljs-keyword,
+body.darkmode--activated .hljs-selector-tag,
+body.darkmode--activated .hljs-subst,
+body.darkmode--activated .hljs-selector-class {
+  color: #008000;
+  font-weight: bold;
 }
-body.darkmode--activated .hljs-comment {
-  color: #5c6370 !important;
+body.darkmode--activated .hljs-number,
+body.darkmode--activated .hljs-literal,
+body.darkmode--activated .hljs-variable,
+body.darkmode--activated .hljs-template-variable,
+body.darkmode--activated .hljs-tag .hljs-attr {
+  color: #008080;
 }
-body.darkmode--activated .hljs-function {
-  color: #61afef !important;
+body.darkmode--activated .hljs-string,
+body.darkmode--activated .hljs-doctag {
+  color: #73c936;
 }
-body.darkmode--activated .hljs-title {
-  color: #e06c75 !important;
+body.darkmode--activated .hljs-title,
+body.darkmode--activated .hljs-section,
+body.darkmode--activated .hljs-selector-id {
+  color: #900;
+  font-weight: bold;
+}
+body.darkmode--activated .hljs-subst {
+  font-weight: normal;
+}
+body.darkmode--activated .hljs-type,
+body.darkmode--activated .hljs-class .hljs-title {
+  color: #458;
+  font-weight: bold;
+}
+body.darkmode--activated .hljs-tag,
+body.darkmode--activated .hljs-name,
+body.darkmode--activated .hljs-attribute {
+  color: #0ff;
+  font-weight: normal;
+}
+body.darkmode--activated .hljs-regexp,
+body.darkmode--activated .hljs-link {
+  color: #009926;
+}
+body.darkmode--activated .hljs-symbol,
+body.darkmode--activated .hljs-bullet {
+  color: #990073;
+}
+body.darkmode--activated .hljs-built_in,
+body.darkmode--activated .hljs-builtin-name {
+  color: #0086b3;
+}
+body.darkmode--activated .hljs-meta {
+  color: #999;
+  font-weight: bold;
+}
+body.darkmode--activated .hljs-deletion {
+  background: #fdd;
+}
+body.darkmode--activated .hljs-addition {
+  background: #dfd;
+}
+body.darkmode--activated .hljs-emphasis {
+  font-style: italic;
+}
+body.darkmode--activated .hljs-strong {
+  font-weight: bold;
+}
+body.darkmode--activated .hljs-punctuation {
+  color: #f5f5f5;
 }
 .highlight ::selection,
 pre ::selection {
