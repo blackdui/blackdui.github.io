@@ -1313,7 +1313,7 @@ pre code {
     vertical-align: middle;
   }
   .links-of-author a::before {
-    background: #c7ffb6;
+    background: #0360b4;
     display: inline-block;
     margin-right: 3px;
     transform: translateY(-2px);
@@ -3161,4 +3161,7 @@ pre,
   word-break: normal;
   overflow-x: auto;
   max-width: 100%;
+}
+html {
+  overflow-x: hidden;
 }
