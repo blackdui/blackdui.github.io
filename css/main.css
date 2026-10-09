@@ -1313,7 +1313,7 @@ pre code {
     vertical-align: middle;
   }
   .links-of-author a::before {
-    background: #b5ffff;
+    background: #4ff639;
     display: inline-block;
     margin-right: 3px;
     transform: translateY(-2px);
@@ -1756,7 +1756,6 @@ pre code {
 }
 .back-to-top span {
   margin-right: 8px;
-  display: none;
 }
 .back-to-top .fa {
   text-align: center;
@@ -3059,18 +3058,46 @@ pre ::-moz-selection {
   background: rgba(66,139,202,0.32);
   color: #222;
 }
-html,
-body {
-  overflow-x: hidden;
-  max-width: 100vw;
-}
-.container {
-  max-width: 100%;
-  padding-left: 1rem;
-  padding-right: 1rem;
+.post-body {
+  word-break: break-all;
+  overflow-wrap: break-word;
 }
 pre,
 .highlight {
-  max-width: 100%;
+  word-break: normal;
   overflow-x: auto;
+  max-width: 100%;
+}
+@media (max-width: 150px) {
+  .container,
+  .header,
+  .footer,
+  .main,
+  .sidebar {
+    display: none !important;
+  }
+  .sidebar-toggle,
+  display none,
+  .screen-tip {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #fff;
+    color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    font-size: 18px;
+    box-sizing: border-box;
+  }
+}
+@media (min-width: 150px) {
+  .screen-tip {
+    display: none !important;
+  }
 }
