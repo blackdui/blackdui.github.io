@@ -1313,7 +1313,7 @@ pre code {
     vertical-align: middle;
   }
   .links-of-author a::before {
-    background: #e95eff;
+    background: #ffa252;
     display: inline-block;
     margin-right: 3px;
     transform: translateY(-2px);
@@ -3104,8 +3104,6 @@ pre,
 }
 .notbyai-desc {
   font-size: 0.9em;
-  opacity: 0.8;
-  color: #222;
   margin: 4px 0 0 0;
   text-align: left;
 }
