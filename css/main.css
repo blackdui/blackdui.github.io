@@ -1313,7 +1313,7 @@ pre code {
     vertical-align: middle;
   }
   .links-of-author a::before {
-    background: #0360b4;
+    background: #e95eff;
     display: inline-block;
     margin-right: 3px;
     transform: translateY(-2px);
@@ -1736,67 +1736,6 @@ pre code {
   }
   50%, 70% {
     transform: scale(1.1);
-  }
-}
-@media (max-width: 567px) {
-  .main-inner {
-    padding: initial !important;
-  }
-  .posts-expand .post-header {
-    margin-bottom: 10px !important;
-  }
-  .post-block {
-    margin-top: initial !important;
-    padding: 8px 18px 8px !important;
-  }
-  .post-body h1,
-  .post-body h2,
-  .post-body h3,
-  .post-body h4,
-  .post-body h5,
-  .post-body h6 {
-    margin: 20px 0 8px;
-  }
-  .post-body .note h1,
-  .post-body .tabs .tab-content .tab-pane h1,
-  .post-body .note h2,
-  .post-body .tabs .tab-content .tab-pane h2,
-  .post-body .note h3,
-  .post-body .tabs .tab-content .tab-pane h3,
-  .post-body .note h4,
-  .post-body .tabs .tab-content .tab-pane h4,
-  .post-body .note h5,
-  .post-body .tabs .tab-content .tab-pane h5,
-  .post-body .note h6,
-  .post-body .tabs .tab-content .tab-pane h6 {
-    margin: 0 5px;
-  }
-  .post-body > p {
-    margin: 0 0 10px;
-  }
-  .post-body .note > p,
-  .post-body .tabs .tab-content .tab-pane > p {
-    padding: 0 5px;
-  }
-  .post-body img,
-  .post-body video {
-    margin-bottom: 10px !important;
-  }
-  .post-body figure:not(.highlight) figcaption {
-    margin: -5px auto 15px !important;
-  }
-  .post-body .note {
-    margin-bottom: 10px !important;
-    padding: 10px !important;
-  }
-  .post-body .tabs .tab-content .tab-pane {
-    padding: 10px 10px 0 !important;
-  }
-  .post-eof {
-    margin: 40px auto 20px !important;
-  }
-  .pagination {
-    margin-top: 40px;
   }
 }
 .back-to-top {
@@ -2256,24 +2195,6 @@ pre code {
 }
 .post-block:last-of-type .post-eof {
   display: none;
-}
-.post-copyright ul {
-  list-style: none;
-  overflow: hidden;
-  padding: 0.5em 1em;
-  position: relative;
-  background: var(--card-bg-color);
-  border-left: 3px solid #ff2a2a;
-  margin: 1em 0 0;
-}
-.post-copyright ul::after {
-  content: '\f25e';
-  font-family: 'Font Awesome 7 Brands';
-  font-size: 200px;
-  opacity: 0.1;
-  position: absolute;
-  right: -50px;
-  top: -150px;
 }
 .post-tags {
   margin-top: 40px;
@@ -3130,10 +3051,7 @@ pre ::-moz-selection {
   .sidebar-toggle,
   display none,
   .screen-tip {
-    display: block;
-    position: fixed;
-    top: 0;
-    left: 0;
+    display: block position fixed top 0 left 0;
     width: 100vw;
     height: 100vh;
     background: #fff;
@@ -3162,6 +3080,32 @@ pre,
   overflow-x: auto;
   max-width: 100%;
 }
-html {
-  overflow-x: hidden;
+.post-license-block {
+  margin-top: 2rem;
+  padding: 1rem 1.2rem;
+  border-radius: 8px;
+  background: rgba(240,240,240,0.5);
+  font-size: 0.92em;
+  line-height: 1.6;
+  text-align: left;
+}
+.post-license-item {
+  margin: 6px 0;
+  text-align: left;
+}
+.notbyai-row {
+  margin-top: 8px;
+  text-align: left;
+}
+.notbyai-badge {
+  height: 4em;
+  vertical-align: middle;
+  margin-left: 6px;
+}
+.notbyai-desc {
+  font-size: 0.9em;
+  opacity: 0.8;
+  color: #222;
+  margin: 4px 0 0 0;
+  text-align: left;
 }

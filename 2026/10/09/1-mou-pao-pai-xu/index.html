@@ -2,7 +2,7 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#222"><meta name="generator" content="Hexo 8.1.2">
 
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
@@ -19,30 +19,27 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"blackdui.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.29.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":true,"style":null},"scrollbar":true,"fold":{"enable":true,"height":500,"sytle":"unfold"},"language":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.json","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js" defer></script>
 
-    <meta name="description" content="添加词库">
+    <meta name="description" content="冒泡排序">
 <meta property="og:type" content="article">
-<meta property="og:title" content="小狼毫添加词库">
-<meta property="og:url" content="https://blackdui.github.io/2026/10/04/%E5%B0%8F%E7%8B%BC%E6%AF%AB%E6%B7%BB%E5%8A%A0%E8%AF%8D%E5%BA%93/index.html">
+<meta property="og:title" content="1冒泡排序">
+<meta property="og:url" content="https://blackdui.github.io/2026/10/09/1-mou-pao-pai-xu/index.html">
 <meta property="og:site_name" content="BlectCooding">
-<meta property="og:description" content="添加词库">
+<meta property="og:description" content="冒泡排序">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://blackdui.github.io/images/Snapshot_261004164145.png">
-<meta property="article:published_time" content="2026-10-04T07:24:32.000Z">
-<meta property="article:modified_time" content="2026-10-07T14:48:40.771Z">
+<meta property="article:published_time" content="2026-10-09T13:53:11.000Z">
+<meta property="article:modified_time" content="2026-10-09T14:10:09.516Z">
 <meta property="article:author" content="Blect">
-<meta property="article:tag" content="inputMethod">
-<meta property="article:tag" content="memo">
+<meta property="article:tag" content="algorithm">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://blackdui.github.io/images/Snapshot_261004164145.png">
 
 
-<link rel="canonical" href="https://blackdui.github.io/2026/10/04/%E5%B0%8F%E7%8B%BC%E6%AF%AB%E6%B7%BB%E5%8A%A0%E8%AF%8D%E5%BA%93/">
+<link rel="canonical" href="https://blackdui.github.io/2026/10/09/1-mou-pao-pai-xu/">
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://blackdui.github.io/2026/10/04/%E5%B0%8F%E7%8B%BC%E6%AF%AB%E6%B7%BB%E5%8A%A0%E8%AF%8D%E5%BA%93/","path":"2026/10/04/小狼毫添加词库/","title":"小狼毫添加词库"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://blackdui.github.io/2026/10/09/1-mou-pao-pai-xu/","path":"2026/10/09/1-mou-pao-pai-xu/","title":"1冒泡排序"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>小狼毫添加词库 | BlectCooding</title>
+<title>1冒泡排序 | BlectCooding</title>
   
 
 
@@ -70,7 +67,6 @@
 
 
 
-<meta name="viewport" content="width=device-width, initial-scale=1">
 <div class="screen-tip">
 no enough width
 </div>
@@ -158,7 +154,7 @@ no enough width
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B7%B1%E8%93%9D%E8%AF%8D%E5%BA%93%E8%BD%AC%E6%8D%A2"><span class="nav-number">1.</span> <span class="nav-text">深蓝词库转换</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%87%E4%BB%B6%E4%BF%AE%E6%94%B9"><span class="nav-number">2.</span> <span class="nav-text">文件修改</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99"><span class="nav-number">3.</span> <span class="nav-text">参考资料</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AE%80%E5%8D%95%E8%AE%B0%E5%BD%95"><span class="nav-number">2.</span> <span class="nav-text">简单记录</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0"><span class="nav-number">3.</span> <span class="nav-text">代码实现</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99"><span class="nav-number">4.</span> <span class="nav-text">参考资料</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -173,13 +169,13 @@ no enough width
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">2</span>
+          <span class="site-state-item-count">3</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-count">3</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -211,7 +207,7 @@ no enough width
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://blackdui.github.io/2026/10/04/%E5%B0%8F%E7%8B%BC%E6%AF%AB%E6%B7%BB%E5%8A%A0%E8%AF%8D%E5%BA%93/">
+    <link itemprop="mainEntityOfPage" href="https://blackdui.github.io/2026/10/09/1-mou-pao-pai-xu/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
@@ -224,12 +220,12 @@ no enough width
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="小狼毫添加词库 | BlectCooding">
-      <meta itemprop="description" content="添加词库">
+      <meta itemprop="name" content="1冒泡排序 | BlectCooding">
+      <meta itemprop="description" content="冒泡排序">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          小狼毫添加词库
+          1冒泡排序
         </h1>
 
         <div class="post-meta-container">
@@ -239,15 +235,9 @@ no enough width
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
+      
 
-      <time title="创建时间：2026-10-04 15:24:32" itemprop="dateCreated datePublished" datetime="2026-10-04T15:24:32+08:00">2026-10-04</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2026-10-07 22:48:40" itemprop="dateModified" datetime="2026-10-07T22:48:40+08:00">2026-10-07</time>
+      <time title="创建时间：2026-10-09 21:53:11 / 修改时间：22:10:09" itemprop="dateCreated datePublished" datetime="2026-10-09T21:53:11+08:00">2026-10-09</time>
     </span>
 
   
@@ -257,7 +247,7 @@ no enough width
         <i class="far fa-file-lines"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>61</span>
+      <span>145</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -268,25 +258,21 @@ no enough width
     </span>
 </div>
 
-            <div class="post-description">添加词库</div>
+            <div class="post-description">冒泡排序</div>
         </div>
       </header>
 
     
     
     
-    <div class="post-body" itemprop="articleBody"><h2 id="深蓝词库转换"><a href="#深蓝词库转换" class="headerlink" title="深蓝词库转换"></a>深蓝词库转换</h2><p>将搜狗scel格式的词库转换成txt格式
-双拼就是选择无拼音纯汉字
-<img src="/images/Snapshot_261004164145.png"></p>
-<h2 id="文件修改"><a href="#文件修改" class="headerlink" title="文件修改"></a>文件修改</h2><p>在用户目录
-新建mycs.dict.yaml</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">--- </span></span><br><span class="line"><span class="attr">name:</span> <span class="string">dict_sougou_standard</span>  <span class="comment">#自定义的词库的名字，不加后缀 </span></span><br><span class="line"><span class="attr">version:</span> <span class="string">&quot;2016.10.29&quot;</span> </span><br><span class="line"><span class="attr">sort:</span> <span class="string">by_weight</span> </span><br><span class="line"><span class="attr">use_preset_vocabulary:</span> <span class="literal">true</span> </span><br><span class="line"><span class="string">...</span></span><br><span class="line"></span><br><span class="line"><span class="string">词库文件放在这里</span></span><br></pre></td></tr></table></figure>
-<p>总词库rime_ice.dict.yaml增加</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">import_tables:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">mycs</span></span><br><span class="line"><span class="string">...</span></span><br></pre></td></tr></table></figure>
-<p>完成</p>
+    <div class="post-body" itemprop="articleBody"><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>打算把算法学一学，目标是能熟练写出来就算胜利。进度的话，每天一个学一个新的，
+不知道能不能行。第一个是冒泡排序。</p>
+<h2 id="简单记录"><a href="#简单记录" class="headerlink" title="简单记录"></a>简单记录</h2><p>我感觉，画个图，然后根据算法步骤过一遍就大致可以理解原理了，剩下就是熟练度的问题。<br>时间复杂度O(n²)<br>空间复杂度O(1)</p>
+<p>从零下标开始，元素两两相比，大的元素向后交换<br>后面的元素逐渐有序</p>
+<h2 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span> &#123;</span><br><span class="line">    <span class="type">int</span> arr[] = &#123;<span class="number">3</span>, <span class="number">5</span>, <span class="number">8</span>, <span class="number">4</span>, <span class="number">6</span>&#125;;</span><br><span class="line">    <span class="type">int</span> size = <span class="keyword">sizeof</span>(arr) / <span class="keyword">sizeof</span>(arr[<span class="number">0</span>]);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; size - <span class="number">1</span>; i++) &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>; j &lt; size - i - <span class="number">1</span>; j++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (arr[j] &gt; arr[j+<span class="number">1</span>]) &#123;</span><br><span class="line">                <span class="type">int</span> temp;</span><br><span class="line">                temp = arr[j];</span><br><span class="line">                arr[j] = arr[j+<span class="number">1</span>];</span><br><span class="line">                arr[j+<span class="number">1</span>]=temp;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; size; i++) &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;%d &quot;</span>, arr[i]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <hr>
 <h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul>
-<li><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/471412208">知乎文章</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.runoob.com/w3cnote/bubble-sort.html">runoob</a></li>
 </ul>
 
     </div>
@@ -296,37 +282,42 @@ no enough width
     
 
     <footer class="post-footer">
-          
-
-<div class="post-copyright">
-<ul>
-  <li class="post-copyright-author">
-      <strong>本文作者： </strong>Blect
-  </li>
-  <li class="post-copyright-link">
-      <strong>本文链接：</strong>
-      <a href="https://blackdui.github.io/2026/10/04/%E5%B0%8F%E7%8B%BC%E6%AF%AB%E6%B7%BB%E5%8A%A0%E8%AF%8D%E5%BA%93/" title="小狼毫添加词库">https://blackdui.github.io/2026/10/04/小狼毫添加词库/</a>
-  </li>
-  <li class="post-copyright-license">
-      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-CN" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
-  </li>
-</ul>
+  <div class="post-license-block">
+    <div class="post-license-item">
+      <span>本文作者：</span>
+      <span>Blect</span>
+  </div>
+<div class="post-license-item">
+    <span>原文链接：</span>
+    <a href="https://blackdui.github.io/2026/10/09/1-mou-pao-pai-xu/">https://blackdui.github.io/2026/10/09/1-mou-pao-pai-xu/</a>
+  </div>
+  <div class="post-license-item">
+    <span>许可协议：</span>
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener noreferrer">CC BY-NC-SA 4.0</a>
+  </div>
+  <div class="post-license-item notbyai-row">
+    <a href="https://notbyai.fyi/" target="_blank" rel="noopener noreferrer">
+      <img src="https://notbyai.fyi/img/written-by-human-not-by-ai-black.svg" alt="Not By AI Badge" class="notbyai-badge">
+    </a>
+    <p class="notbyai-desc">本文至少90%内容由人类原创，AI仅用于辅助校对。</p>
+  </div>
 </div>
 
+
+
           <div class="post-tags">
-              <a href="/tags/memo/" rel="tag"># memo</a>
-              <a href="/tags/inputMethod/" rel="tag"># inputMethod</a>
+              <a href="/tags/algorithm/" rel="tag"># algorithm</a>
           </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
+                <a href="/2026/10/08/bo-ke-da-jian-ji-lu/" rel="prev" title="博客搭建记录">
+                  <i class="fa fa-angle-left"></i> 博客搭建记录
+                </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2026/10/08/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E8%AE%B0%E5%BD%95/" rel="next" title="博客搭建记录">
-                  博客搭建记录 <i class="fa fa-angle-right"></i>
-                </a>
             </div>
           </div>
     </footer>
