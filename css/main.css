@@ -1310,7 +1310,7 @@ pre code {
     vertical-align: middle;
   }
   .links-of-author a::before {
-    background: #ff1f59;
+    background: #a7ff54;
     display: inline-block;
     margin-right: 3px;
     transform: translateY(-2px);
@@ -2965,6 +2965,9 @@ pre ::-moz-selection {
 .post-body {
   word-break: break-all;
   overflow-wrap: break-word;
+}
+.post-body .img {
+  display: flex;
 }
 pre,
 .highlight {
